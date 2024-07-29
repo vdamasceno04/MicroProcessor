@@ -1,7 +1,6 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
-
 ENTITY rom IS
     PORT (
         clk : IN STD_LOGIC;
@@ -9,23 +8,21 @@ ENTITY rom IS
         dado : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
     );
 END ENTITY;
-
 ARCHITECTURE a_rom OF rom IS
     TYPE mem IS ARRAY (-64 TO 127) OF STD_LOGIC_VECTOR(15 DOWNTO 0);
     CONSTANT conteudo_rom : mem := (
         -- caso endereco => conteudo
-        0 =>  "0000101000100100", 
-        1 =>  "0000000000111110", 
-        2 =>  "0000101000100100", 
-        3 =>  "0000000000111000", 
-        4 =>  "0000001000010011", 
-        5 =>  "0000000000111100", 
-        6 =>  "1111110100010010", 
-        7 =>  "0000101000100100", 
-        8 =>  "0000000000111000", 
-        9 =>  "0000001000010011", 
-        10 => "0000000000111100",
-        11 => "1111110100011010",
+      0 => "0000010100100100",
+      1 => "0000010001000100",
+      2 => "0000000111100100",
+      3 => "0000000011111000",
+      4 => "0000000000110000",
+      5 => "0000000011111000",
+      6 => "0000001101010000",
+      7 => "0000000011111000",
+      8 => "0000000010110100",
+      9 => "0000000011111000",
+      10 => "0000001110010100",
         -- abaixo: casos omissos => (zero em todos os bits)
         OTHERS => (OTHERS => '0')
     );

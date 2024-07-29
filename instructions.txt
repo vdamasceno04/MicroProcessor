@@ -15,16 +15,13 @@ ADD  :  xxxxxxxx rrr 01101     (ADD entre registrador e acumulador)
 ADDI :  iiiiiiii xxx 01111     (ADD entre imediato e acumulador)
 SUB  :  xxxxxxxx rrr 10001     (SUB entre registrador e acumulador)
 SUBI :  iiiiiiii xxx 10011     (SUB entre imediato e acumulador)
-JZ   :  iiiiiiii xxx 00010     (Salta se a flag de zero está acionada)
+BNEQ :  iiiiiiii rrr 00010     (Salta se o valor no registrador é diferente do acumulador)
+BGTR :  iiiiiiii rrr 00110     (Salta se o valor no registrador maior que o acumulador)
 JC   :  iiiiiiii xxx 10010     (Salta se a flag de carry está acionada)
 JN   :  iiiiiiii xxx 10110     (Salta se a flag de negativo está acionada)
 JO   :  iiiiiiii xxx 11010     (Salta se a flag de overflow está acionada)
-
---------------------LAB-07------------------------------
 LW   :  iiiiiiii rrr 10100     (carrega valor da memoria no registrador) 
 SW   :  iiiiiiii rrr 10000     (carrega valor do registrador na memoria) 
-
---------------------LAB-Final------------------------------
 LU   :  iiiiiiii rrr 01100     (carrega os bits superiores do registrador) 
 DJNZ :  iiiiiiii rrr 11110     (decrementa registrador e pula se o resultado é zero) 
 
